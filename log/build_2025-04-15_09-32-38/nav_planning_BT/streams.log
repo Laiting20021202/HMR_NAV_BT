@@ -1,0 +1,49 @@
+[0.801s] Invoking command in '/home/laiting/HMR_WS/src/nav_planning_BT': PYTHONPATH=/home/laiting/HMR_WS/build/nav_planning_BT/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/laiting/HMR_WS/install/nav_planning_BT/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/nav_planning_BT build --build-base /home/laiting/HMR_WS/build/nav_planning_BT/build install --record /home/laiting/HMR_WS/build/nav_planning_BT/install.log --single-version-externally-managed install_data
+[1.118s] running egg_info
+[1.118s] creating ../../build/nav_planning_BT/nav_planning_BT.egg-info
+[1.118s] writing ../../build/nav_planning_BT/nav_planning_BT.egg-info/PKG-INFO
+[1.119s] writing dependency_links to ../../build/nav_planning_BT/nav_planning_BT.egg-info/dependency_links.txt
+[1.119s] writing entry points to ../../build/nav_planning_BT/nav_planning_BT.egg-info/entry_points.txt
+[1.119s] writing requirements to ../../build/nav_planning_BT/nav_planning_BT.egg-info/requires.txt
+[1.119s] writing top-level names to ../../build/nav_planning_BT/nav_planning_BT.egg-info/top_level.txt
+[1.119s] writing manifest file '../../build/nav_planning_BT/nav_planning_BT.egg-info/SOURCES.txt'
+[1.121s] reading manifest file '../../build/nav_planning_BT/nav_planning_BT.egg-info/SOURCES.txt'
+[1.122s] writing manifest file '../../build/nav_planning_BT/nav_planning_BT.egg-info/SOURCES.txt'
+[1.122s] running build
+[1.122s] running build_py
+[1.122s] creating /home/laiting/HMR_WS/build/nav_planning_BT/build
+[1.122s] creating /home/laiting/HMR_WS/build/nav_planning_BT/build/lib
+[1.122s] creating /home/laiting/HMR_WS/build/nav_planning_BT/build/lib/nav_planning_BT
+[1.122s] copying nav_planning_BT/situation_table_node.py -> /home/laiting/HMR_WS/build/nav_planning_BT/build/lib/nav_planning_BT
+[1.123s] copying nav_planning_BT/basic_condition_testing_node.py -> /home/laiting/HMR_WS/build/nav_planning_BT/build/lib/nav_planning_BT
+[1.123s] copying nav_planning_BT/nav_planning_BT_node.py -> /home/laiting/HMR_WS/build/nav_planning_BT/build/lib/nav_planning_BT
+[1.123s] copying nav_planning_BT/__init__.py -> /home/laiting/HMR_WS/build/nav_planning_BT/build/lib/nav_planning_BT
+[1.123s] copying nav_planning_BT/nav_to_safe_point.py -> /home/laiting/HMR_WS/build/nav_planning_BT/build/lib/nav_planning_BT
+[1.123s] running install
+[1.123s] running install_lib
+[1.124s] creating /home/laiting/HMR_WS/install/nav_planning_BT/lib/python3.10/site-packages/nav_planning_BT
+[1.124s] copying /home/laiting/HMR_WS/build/nav_planning_BT/build/lib/nav_planning_BT/situation_table_node.py -> /home/laiting/HMR_WS/install/nav_planning_BT/lib/python3.10/site-packages/nav_planning_BT
+[1.124s] copying /home/laiting/HMR_WS/build/nav_planning_BT/build/lib/nav_planning_BT/basic_condition_testing_node.py -> /home/laiting/HMR_WS/install/nav_planning_BT/lib/python3.10/site-packages/nav_planning_BT
+[1.124s] copying /home/laiting/HMR_WS/build/nav_planning_BT/build/lib/nav_planning_BT/nav_planning_BT_node.py -> /home/laiting/HMR_WS/install/nav_planning_BT/lib/python3.10/site-packages/nav_planning_BT
+[1.125s] copying /home/laiting/HMR_WS/build/nav_planning_BT/build/lib/nav_planning_BT/__init__.py -> /home/laiting/HMR_WS/install/nav_planning_BT/lib/python3.10/site-packages/nav_planning_BT
+[1.125s] copying /home/laiting/HMR_WS/build/nav_planning_BT/build/lib/nav_planning_BT/nav_to_safe_point.py -> /home/laiting/HMR_WS/install/nav_planning_BT/lib/python3.10/site-packages/nav_planning_BT
+[1.125s] byte-compiling /home/laiting/HMR_WS/install/nav_planning_BT/lib/python3.10/site-packages/nav_planning_BT/situation_table_node.py to situation_table_node.cpython-310.pyc
+[1.128s] byte-compiling /home/laiting/HMR_WS/install/nav_planning_BT/lib/python3.10/site-packages/nav_planning_BT/basic_condition_testing_node.py to basic_condition_testing_node.cpython-310.pyc
+[1.129s] byte-compiling /home/laiting/HMR_WS/install/nav_planning_BT/lib/python3.10/site-packages/nav_planning_BT/nav_planning_BT_node.py to nav_planning_BT_node.cpython-310.pyc
+[1.130s] byte-compiling /home/laiting/HMR_WS/install/nav_planning_BT/lib/python3.10/site-packages/nav_planning_BT/__init__.py to __init__.cpython-310.pyc
+[1.130s] byte-compiling /home/laiting/HMR_WS/install/nav_planning_BT/lib/python3.10/site-packages/nav_planning_BT/nav_to_safe_point.py to nav_to_safe_point.cpython-310.pyc
+[1.132s] running install_data
+[1.132s] creating /home/laiting/HMR_WS/install/nav_planning_BT/share/ament_index
+[1.132s] creating /home/laiting/HMR_WS/install/nav_planning_BT/share/ament_index/resource_index
+[1.133s] creating /home/laiting/HMR_WS/install/nav_planning_BT/share/ament_index/resource_index/packages
+[1.133s] copying resource/nav_planning_BT -> /home/laiting/HMR_WS/install/nav_planning_BT/share/ament_index/resource_index/packages
+[1.133s] copying package.xml -> /home/laiting/HMR_WS/install/nav_planning_BT/share/nav_planning_BT
+[1.133s] running install_egg_info
+[1.135s] Copying ../../build/nav_planning_BT/nav_planning_BT.egg-info to /home/laiting/HMR_WS/install/nav_planning_BT/lib/python3.10/site-packages/nav_planning_BT-0.0.0-py3.10.egg-info
+[1.135s] running install_scripts
+[1.159s] Installing basic_condition_testing_node script to /home/laiting/HMR_WS/install/nav_planning_BT/lib/nav_planning_BT
+[1.159s] Installing nav_planning_BT_node script to /home/laiting/HMR_WS/install/nav_planning_BT/lib/nav_planning_BT
+[1.159s] Installing nav_to_safe_point script to /home/laiting/HMR_WS/install/nav_planning_BT/lib/nav_planning_BT
+[1.159s] Installing situation_table_node script to /home/laiting/HMR_WS/install/nav_planning_BT/lib/nav_planning_BT
+[1.159s] writing list of installed files to '/home/laiting/HMR_WS/build/nav_planning_BT/install.log'
+[1.182s] Invoked command in '/home/laiting/HMR_WS/src/nav_planning_BT' returned '0': PYTHONPATH=/home/laiting/HMR_WS/build/nav_planning_BT/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/laiting/HMR_WS/install/nav_planning_BT/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/nav_planning_BT build --build-base /home/laiting/HMR_WS/build/nav_planning_BT/build install --record /home/laiting/HMR_WS/build/nav_planning_BT/install.log --single-version-externally-managed install_data

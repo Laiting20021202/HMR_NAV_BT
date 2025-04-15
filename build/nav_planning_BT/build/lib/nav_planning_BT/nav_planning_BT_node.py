@@ -10,6 +10,7 @@ class BasicConditionTestingNode(Node):
         # 初始狀態值
         self.bc_lv = 3
         self.mc_lv = -1
+        asd
 
         # 訂閱 BC_LV 與 MC_LV topic
         self.create_subscription(Int32, 'BC_LV', self.bc_callback, 10)
