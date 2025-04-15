@@ -1,0 +1,13 @@
+digraph pastafarianism {
+ordering=out;
+graph [fontname="times-roman"];
+node [fontname="times-roman"];
+edge [fontname="times-roman"];
+SituationSelector [fillcolor=cyan, fontcolor=black, fontsize=9, label=SituationSelector, shape=octagon, style=filled];
+S0 [fillcolor=gray, fontcolor=black, fontsize=9, label=S0, shape=ellipse, style=filled];
+SituationSelector -> S0;
+S1 [fillcolor=gray, fontcolor=black, fontsize=9, label=S1, shape=ellipse, style=filled];
+SituationSelector -> S1;
+S2 [fillcolor=gray, fontcolor=black, fontsize=9, label=S2, shape=ellipse, style=filled];
+SituationSelector -> S2;
+}
