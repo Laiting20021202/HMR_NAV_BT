@@ -24,6 +24,7 @@ setup(
             'nav_planning_BT_node = nav_planning_BT.nav_planning_BT_node:main',
             'nav_to_safe_point = nav_planning_BT.nav_to_safe_point:main',
             'situation_table_node = nav_planning_BT.situation_table_node:main',
+            'nearest_wall_finder = nav_planning_BT.NearestWallFinder:main',
         ],
     },
 )

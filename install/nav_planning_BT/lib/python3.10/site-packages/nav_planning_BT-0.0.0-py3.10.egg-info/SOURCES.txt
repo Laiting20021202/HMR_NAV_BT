@@ -8,6 +8,7 @@ setup.py
 ../../build/nav_planning_BT/nav_planning_BT.egg-info/requires.txt
 ../../build/nav_planning_BT/nav_planning_BT.egg-info/top_level.txt
 ../../build/nav_planning_BT/nav_planning_BT.egg-info/zip-safe
+nav_planning_BT/NearestWallFinder.py
 nav_planning_BT/__init__.py
 nav_planning_BT/basic_condition_testing_node.py
 nav_planning_BT/nav_planning_BT_node.py
