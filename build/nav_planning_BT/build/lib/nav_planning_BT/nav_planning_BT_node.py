@@ -3,132 +3,182 @@ import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Int32
 import py_trees
+import py_trees.display
 
-# 全域變數，待在 main() 指定 node 實例後供各 leaf 使用
+# Global node for publishing
 g_node = None
 
 class BasicConditionTestingNode(Node):
     def __init__(self):
         super().__init__('basic_condition_testing_node')
-        # 初始化數值
         self.bc_lv = 3
         self.mc_lv = -1
 
-        # 訂閱 BC_LV 與 MC_LV topic
+        # Subscriptions
         self.create_subscription(Int32, 'BC_LV', self.bc_callback, 10)
         self.create_subscription(Int32, 'MC_LV', self.mc_callback, 10)
-        self.get_logger().info("已訂閱 BC_LV 與 MC_LV topic。")
+        self.get_logger().info("Subscribed to BC_LV and MC_LV topics.")
 
-        # 建立 publisher，發布 topic 'nav_situation' (資料型態 Int32)
+        # Publisher
         self.nav_situation_pub = self.create_publisher(Int32, 'nav_situation', 10)
 
-        # 建立並設定行為樹
+        # Build and setup tree
         self.tree = self.create_behavior_tree()
         self.tree.setup(timeout=15)
-
-        # 產生 dot 檔案 (可用 Graphviz 轉換成圖片)
         py_trees.display.render_dot_tree(self.tree.root, target_directory='.', name='behavior_tree')
 
-        # 每秒 tick 一次行為樹
-        self.create_timer(1.0, self.tick_tree)
+        # Tick at 2Hz for faster reaction
+        self.create_timer(0.5, self.tick_tree)
 
-    def bc_callback(self, msg):
+    def bc_callback(self, msg: Int32):
         self.bc_lv = msg.data
-        #self.get_logger().info(f"接收到 BC_LV: {self.bc_lv}")
 
-    def mc_callback(self, msg):
+    def mc_callback(self, msg: Int32):
         self.mc_lv = msg.data
-        #self.get_logger().info(f"接收到 MC_LV: {self.mc_lv}")
 
     def publish_nav_situation(self, value: int):
-        """發布 nav_situation topic 的方法"""
         msg = Int32()
         msg.data = value
         self.nav_situation_pub.publish(msg)
         self.get_logger().info(f"Published nav_situation: {value}")
 
-    # 提供 getter 給行為樹節點
-    def get_bc_lv_value(self):
+    def get_bc_lv_value(self) -> int:
         return self.bc_lv
 
-    def get_mc_lv_value(self):
+    def get_mc_lv_value(self) -> int:
         return self.mc_lv
 
-    # -----------------------------
-    # 定義 Leaf 節點 (不改變行為樹結構)
-    # -----------------------------
-    class Prohibited_area(py_trees.behaviour.Behaviour):
-        def __init__(self, get_mc_lv, name="PA"):
+    # Leaf behaviors
+    class IsM(py_trees.behaviour.Behaviour):
+        def __init__(self, mc_getter, expected, name):
             super().__init__(name)
-            self.get_mc_lv = get_mc_lv
-
+            self.mc_getter = mc_getter
+            self.expected = expected
         def update(self):
-            mc_lv = self.get_mc_lv()
-            if mc_lv == 1:
-                global g_node
-                g_node.publish_nav_situation(-1)
-                self.logger.info("Prohibited_area")
-                return py_trees.common.Status.SUCCESS
-            else:
-                return py_trees.common.Status.FAILURE
+            return py_trees.common.Status.SUCCESS if self.mc_getter() == self.expected else py_trees.common.Status.FAILURE
 
-    class Situation0(py_trees.behaviour.Behaviour):
-        def __init__(self, get_bc_lv, name="S0"):
+    class IsB(py_trees.behaviour.Behaviour):
+        def __init__(self, bc_getter, expected, name):
             super().__init__(name)
-            self.get_bc_lv = get_bc_lv
-
+            self.bc_getter = bc_getter
+            self.expected = expected
         def update(self):
-            bc_lv = self.get_bc_lv()
-            if bc_lv == 3:
-                global g_node
-                g_node.publish_nav_situation(0)
-                self.logger.info("Situation0 簡單避障")
-                return py_trees.common.Status.SUCCESS
-            else:
-                return py_trees.common.Status.FAILURE
+            return py_trees.common.Status.SUCCESS if self.bc_getter() == self.expected else py_trees.common.Status.FAILURE
 
-    class Situation1(py_trees.behaviour.Behaviour):
-        def __init__(self, get_bc_lv, get_mc_lv, name="S1"):
+    class SN(py_trees.behaviour.Behaviour):
+        def __init__(self, name):
             super().__init__(name)
-            self.get_bc_lv = get_bc_lv
-            self.get_mc_lv = get_mc_lv
-
         def update(self):
-            bc_lv = self.get_bc_lv()
-            mc_lv = self.get_mc_lv()
-            if (bc_lv == 1) or (bc_lv == 2 and mc_lv == 3):
-                global g_node
-                g_node.publish_nav_situation(1)
-                self.logger.info("Situation1 立即靠邊停車")
-                return py_trees.common.Status.SUCCESS
-            else:
-                return py_trees.common.Status.FAILURE
+            global g_node
+            g_node.publish_nav_situation(-1)
+            return py_trees.common.Status.SUCCESS
 
-    class Situation2(py_trees.behaviour.Behaviour):
-        def __init__(self, name="S2"):
+    class S0(py_trees.behaviour.Behaviour):
+        def __init__(self, name):
             super().__init__(name)
+        def update(self):
+            global g_node
+            g_node.publish_nav_situation(0)
+            return py_trees.common.Status.SUCCESS
 
+    class S1(py_trees.behaviour.Behaviour):
+        def __init__(self, name):
+            super().__init__(name)
+        def update(self):
+            global g_node
+            g_node.publish_nav_situation(1)
+            return py_trees.common.Status.SUCCESS
+
+    class S2(py_trees.behaviour.Behaviour):
+        def __init__(self, name):
+            super().__init__(name)
         def update(self):
             global g_node
             g_node.publish_nav_situation(2)
-            self.logger.info("Situation2 進入指定區域")
             return py_trees.common.Status.SUCCESS
 
-    # -----------------------------
-    # 建立 Behavior Tree (不改變原本結構)
-    # -----------------------------
-    def create_behavior_tree(self):
-        s0 = self.Situation0(self.get_bc_lv_value, "S0")
-        s1 = self.Situation1(self.get_bc_lv_value, self.get_mc_lv_value, "S1")
-        s2 = self.Situation2("S2")
-        pa = self.Prohibited_area(self.get_mc_lv_value, "PA")
-        # 建立選擇節點，依序檢查 S1 與 S2
-        mzcs = py_trees.composites.Selector("MZCS", memory=False)
-        mzcs.add_children([s1, s2])
-        # 整體行為樹結構，依序檢查 PA、S0 及 mzcs
-        bccs = py_trees.composites.Selector("BCCS", memory=False)
-        bccs.add_children([pa, s0, mzcs])
-        return py_trees.trees.BehaviourTree(bccs)
+    def create_behavior_tree(self) -> py_trees.trees.BehaviourTree:
+        # Root selector
+        root = py_trees.composites.Selector("MZCS", memory=False)
+
+        # Mode sequences and BCCS selectors
+        seq_M1 = py_trees.composites.Sequence("M1_sequence", memory=False)
+        seq_M2 = py_trees.composites.Sequence("M2_sequence", memory=False)
+        seq_M3 = py_trees.composites.Sequence("M3_sequence", memory=False)
+
+        sel_M1 = py_trees.composites.Selector("BCCS_M1", memory=False)
+        sel_M2 = py_trees.composites.Selector("BCCS_M2", memory=False)
+        sel_M3 = py_trees.composites.Selector("BCCS_M3", memory=False)
+
+        # Build M1 branch
+        seq_M1.add_children([
+            self.IsM(self.get_mc_lv_value, 1, "is_M1"),
+            sel_M1
+        ])
+        m1_b1 = py_trees.composites.Sequence("M1_B1_sequence", memory=False)
+        m1_b1.add_children([
+            self.IsB(self.get_bc_lv_value, 1, "is_B1"),
+            self.SN("SN_M1_B1")
+        ])
+        m1_b2 = py_trees.composites.Sequence("M1_B2_sequence", memory=False)
+        m1_b2.add_children([
+            self.IsB(self.get_bc_lv_value, 2, "is_B2"),
+            self.SN("SN_M1_B2")
+        ])
+        m1_b3 = py_trees.composites.Sequence("M1_B3_sequence", memory=False)
+        m1_b3.add_children([
+            self.IsB(self.get_bc_lv_value, 3, "is_B3"),
+            self.S0("S0_M1_B3")
+        ])
+        sel_M1.add_children([m1_b1, m1_b2, m1_b3])
+
+        # Build M2 branch
+        seq_M2.add_children([
+            self.IsM(self.get_mc_lv_value, 2, "is_M2"),
+            sel_M2
+        ])
+        m2_b1 = py_trees.composites.Sequence("M2_B1_sequence", memory=False)
+        m2_b1.add_children([
+            self.IsB(self.get_bc_lv_value, 1, "is_B1"),
+            self.S1("S1_M2_B1")
+        ])
+        m2_b2 = py_trees.composites.Sequence("M2_B2_sequence", memory=False)
+        m2_b2.add_children([
+            self.IsB(self.get_bc_lv_value, 2, "is_B2"),
+            self.S2("S2_M2_B2")
+        ])
+        m2_b3 = py_trees.composites.Sequence("M2_B3_sequence", memory=False)
+        m2_b3.add_children([
+            self.IsB(self.get_bc_lv_value, 3, "is_B3"),
+            self.S0("S0_M2_B3")
+        ])
+        sel_M2.add_children([m2_b1, m2_b2, m2_b3])
+
+        # Build M3 branch
+        seq_M3.add_children([
+            self.IsM(self.get_mc_lv_value, 3, "is_M3"),
+            sel_M3
+        ])
+        m3_b1 = py_trees.composites.Sequence("M3_B1_sequence", memory=False)
+        m3_b1.add_children([
+            self.IsB(self.get_bc_lv_value, 1, "is_B1"),
+            self.S1("S1_M3_B1")
+        ])
+        m3_b2 = py_trees.composites.Sequence("M3_B2_sequence", memory=False)
+        m3_b2.add_children([
+            self.IsB(self.get_bc_lv_value, 2, "is_B2"),
+            self.S1("S1_M3_B2")
+        ])
+        m3_b3 = py_trees.composites.Sequence("M3_B3_sequence", memory=False)
+        m3_b3.add_children([
+            self.IsB(self.get_bc_lv_value, 3, "is_B3"),
+            self.S0("S0_M3_B3")
+        ])
+        sel_M3.add_children([m3_b1, m3_b2, m3_b3])
+
+        # Add branches to root
+        root.add_children([seq_M1, seq_M2, seq_M3])
+        return py_trees.trees.BehaviourTree(root)
 
     def tick_tree(self):
         self.tree.tick()
@@ -138,7 +188,7 @@ def main(args=None):
     rclpy.init(args=args)
     node = BasicConditionTestingNode()
     global g_node
-    g_node = node  # 指定全域 node 實例，供 leaf 節點呼叫 publish 方法
+    g_node = node
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:
@@ -147,6 +197,206 @@ def main(args=None):
         node.destroy_node()
         rclpy.shutdown()
 
+if __name__ == '__main__':
+    main()
+#!/usr/bin/env python3
+import rclpy
+from rclpy.node import Node
+from std_msgs.msg import Int32
+import py_trees
+import py_trees.display
+
+# Global node for publishing
+g_node = None
+
+class BasicConditionTestingNode(Node):
+    def __init__(self):
+        super().__init__('basic_condition_testing_node')
+        self.bc_lv = 3
+        self.mc_lv = -1
+
+        # Subscriptions
+        self.create_subscription(Int32, 'BC_LV', self.bc_callback, 10)
+        self.create_subscription(Int32, 'MC_LV', self.mc_callback, 10)
+        self.get_logger().info("Subscribed to BC_LV and MC_LV topics.")
+
+        # Publisher
+        self.nav_situation_pub = self.create_publisher(Int32, 'nav_situation', 10)
+
+        # Build and setup tree
+        self.tree = self.create_behavior_tree()
+        self.tree.setup(timeout=15)
+        py_trees.display.render_dot_tree(self.tree.root, target_directory='.', name='behavior_tree')
+
+        # Tick at 2Hz for faster reaction
+        self.create_timer(0.5, self.tick_tree)
+
+    def bc_callback(self, msg: Int32):
+        self.bc_lv = msg.data
+
+    def mc_callback(self, msg: Int32):
+        self.mc_lv = msg.data
+
+    def publish_nav_situation(self, value: int):
+        msg = Int32()
+        msg.data = value
+        self.nav_situation_pub.publish(msg)
+        self.get_logger().info(f"Published nav_situation: {value}")
+
+    def get_bc_lv_value(self) -> int:
+        return self.bc_lv
+
+    def get_mc_lv_value(self) -> int:
+        return self.mc_lv
+
+    # Leaf behaviors
+    class IsM(py_trees.behaviour.Behaviour):
+        def __init__(self, mc_getter, expected, name):
+            super().__init__(name)
+            self.mc_getter = mc_getter
+            self.expected = expected
+        def update(self):
+            return py_trees.common.Status.SUCCESS if self.mc_getter() == self.expected else py_trees.common.Status.FAILURE
+
+    class IsB(py_trees.behaviour.Behaviour):
+        def __init__(self, bc_getter, expected, name):
+            super().__init__(name)
+            self.bc_getter = bc_getter
+            self.expected = expected
+        def update(self):
+            return py_trees.common.Status.SUCCESS if self.bc_getter() == self.expected else py_trees.common.Status.FAILURE
+
+    class SN(py_trees.behaviour.Behaviour):
+        def __init__(self, name):
+            super().__init__(name)
+        def update(self):
+            global g_node
+            g_node.publish_nav_situation(-1)
+            return py_trees.common.Status.SUCCESS
+
+    class S0(py_trees.behaviour.Behaviour):
+        def __init__(self, name):
+            super().__init__(name)
+        def update(self):
+            global g_node
+            g_node.publish_nav_situation(0)
+            return py_trees.common.Status.SUCCESS
+
+    class S1(py_trees.behaviour.Behaviour):
+        def __init__(self, name):
+            super().__init__(name)
+        def update(self):
+            global g_node
+            g_node.publish_nav_situation(1)
+            return py_trees.common.Status.SUCCESS
+
+    class S2(py_trees.behaviour.Behaviour):
+        def __init__(self, name):
+            super().__init__(name)
+        def update(self):
+            global g_node
+            g_node.publish_nav_situation(2)
+            return py_trees.common.Status.SUCCESS
+
+    def create_behavior_tree(self) -> py_trees.trees.BehaviourTree:
+        # Root selector
+        root = py_trees.composites.Selector("MZCS", memory=False)
+
+        # Mode sequences and BCCS selectors
+        seq_M1 = py_trees.composites.Sequence("M1_sequence", memory=False)
+        seq_M2 = py_trees.composites.Sequence("M2_sequence", memory=False)
+        seq_M3 = py_trees.composites.Sequence("M3_sequence", memory=False)
+
+        sel_M1 = py_trees.composites.Selector("BCCS_M1", memory=False)
+        sel_M2 = py_trees.composites.Selector("BCCS_M2", memory=False)
+        sel_M3 = py_trees.composites.Selector("BCCS_M3", memory=False)
+
+        # Build M1 branch
+        seq_M1.add_children([
+            self.IsM(self.get_mc_lv_value, 1, "is_M1"),
+            sel_M1
+        ])
+        m1_b1 = py_trees.composites.Sequence("M1_B1_sequence", memory=False)
+        m1_b1.add_children([
+            self.IsB(self.get_bc_lv_value, 1, "is_B1"),
+            self.SN("SN_M1_B1")
+        ])
+        m1_b2 = py_trees.composites.Sequence("M1_B2_sequence", memory=False)
+        m1_b2.add_children([
+            self.IsB(self.get_bc_lv_value, 2, "is_B2"),
+            self.SN("SN_M1_B2")
+        ])
+        m1_b3 = py_trees.composites.Sequence("M1_B3_sequence", memory=False)
+        m1_b3.add_children([
+            self.IsB(self.get_bc_lv_value, 3, "is_B3"),
+            self.S0("S0_M1_B3")
+        ])
+        sel_M1.add_children([m1_b1, m1_b2, m1_b3])
+
+        # Build M2 branch
+        seq_M2.add_children([
+            self.IsM(self.get_mc_lv_value, 2, "is_M2"),
+            sel_M2
+        ])
+        m2_b1 = py_trees.composites.Sequence("M2_B1_sequence", memory=False)
+        m2_b1.add_children([
+            self.IsB(self.get_bc_lv_value, 1, "is_B1"),
+            self.S1("S1_M2_B1")
+        ])
+        m2_b2 = py_trees.composites.Sequence("M2_B2_sequence", memory=False)
+        m2_b2.add_children([
+            self.IsB(self.get_bc_lv_value, 2, "is_B2"),
+            self.S2("S2_M2_B2")
+        ])
+        m2_b3 = py_trees.composites.Sequence("M2_B3_sequence", memory=False)
+        m2_b3.add_children([
+            self.IsB(self.get_bc_lv_value, 3, "is_B3"),
+            self.S0("S0_M2_B3")
+        ])
+        sel_M2.add_children([m2_b1, m2_b2, m2_b3])
+
+        # Build M3 branch
+        seq_M3.add_children([
+            self.IsM(self.get_mc_lv_value, 3, "is_M3"),
+            sel_M3
+        ])
+        m3_b1 = py_trees.composites.Sequence("M3_B1_sequence", memory=False)
+        m3_b1.add_children([
+            self.IsB(self.get_bc_lv_value, 1, "is_B1"),
+            self.S1("S1_M3_B1")
+        ])
+        m3_b2 = py_trees.composites.Sequence("M3_B2_sequence", memory=False)
+        m3_b2.add_children([
+            self.IsB(self.get_bc_lv_value, 2, "is_B2"),
+            self.S1("S1_M3_B2")
+        ])
+        m3_b3 = py_trees.composites.Sequence("M3_B3_sequence", memory=False)
+        m3_b3.add_children([
+            self.IsB(self.get_bc_lv_value, 3, "is_B3"),
+            self.S0("S0_M3_B3")
+        ])
+        sel_M3.add_children([m3_b1, m3_b2, m3_b3])
+
+        # Add branches to root
+        root.add_children([seq_M1, seq_M2, seq_M3])
+        return py_trees.trees.BehaviourTree(root)
+
+    def tick_tree(self):
+        self.tree.tick()
+
+
+def main(args=None):
+    rclpy.init(args=args)
+    node = BasicConditionTestingNode()
+    global g_node
+    g_node = node
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        node.get_logger().info("Keyboard Interrupt!")
+    finally:
+        node.destroy_node()
+        rclpy.shutdown()
 
 if __name__ == '__main__':
     main()
