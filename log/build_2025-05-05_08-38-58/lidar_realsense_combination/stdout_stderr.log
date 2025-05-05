@@ -1,0 +1,35 @@
+running egg_info
+creating ../../build/lidar_realsense_combination/lidar_realsense_combination.egg-info
+writing ../../build/lidar_realsense_combination/lidar_realsense_combination.egg-info/PKG-INFO
+writing dependency_links to ../../build/lidar_realsense_combination/lidar_realsense_combination.egg-info/dependency_links.txt
+writing entry points to ../../build/lidar_realsense_combination/lidar_realsense_combination.egg-info/entry_points.txt
+writing requirements to ../../build/lidar_realsense_combination/lidar_realsense_combination.egg-info/requires.txt
+writing top-level names to ../../build/lidar_realsense_combination/lidar_realsense_combination.egg-info/top_level.txt
+writing manifest file '../../build/lidar_realsense_combination/lidar_realsense_combination.egg-info/SOURCES.txt'
+reading manifest file '../../build/lidar_realsense_combination/lidar_realsense_combination.egg-info/SOURCES.txt'
+writing manifest file '../../build/lidar_realsense_combination/lidar_realsense_combination.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/laiting/HMR_WS/build/lidar_realsense_combination/build
+creating /home/laiting/HMR_WS/build/lidar_realsense_combination/build/lib
+creating /home/laiting/HMR_WS/build/lidar_realsense_combination/build/lib/lidar_realsense_combination
+copying lidar_realsense_combination/realsense_pointcloud_pub.py -> /home/laiting/HMR_WS/build/lidar_realsense_combination/build/lib/lidar_realsense_combination
+copying lidar_realsense_combination/__init__.py -> /home/laiting/HMR_WS/build/lidar_realsense_combination/build/lib/lidar_realsense_combination
+running install
+running install_lib
+creating /home/laiting/HMR_WS/install/lidar_realsense_combination/lib/python3.10/site-packages/lidar_realsense_combination
+copying /home/laiting/HMR_WS/build/lidar_realsense_combination/build/lib/lidar_realsense_combination/realsense_pointcloud_pub.py -> /home/laiting/HMR_WS/install/lidar_realsense_combination/lib/python3.10/site-packages/lidar_realsense_combination
+copying /home/laiting/HMR_WS/build/lidar_realsense_combination/build/lib/lidar_realsense_combination/__init__.py -> /home/laiting/HMR_WS/install/lidar_realsense_combination/lib/python3.10/site-packages/lidar_realsense_combination
+byte-compiling /home/laiting/HMR_WS/install/lidar_realsense_combination/lib/python3.10/site-packages/lidar_realsense_combination/realsense_pointcloud_pub.py to realsense_pointcloud_pub.cpython-310.pyc
+byte-compiling /home/laiting/HMR_WS/install/lidar_realsense_combination/lib/python3.10/site-packages/lidar_realsense_combination/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/laiting/HMR_WS/install/lidar_realsense_combination/share/ament_index
+creating /home/laiting/HMR_WS/install/lidar_realsense_combination/share/ament_index/resource_index
+creating /home/laiting/HMR_WS/install/lidar_realsense_combination/share/ament_index/resource_index/packages
+copying resource/lidar_realsense_combination -> /home/laiting/HMR_WS/install/lidar_realsense_combination/share/ament_index/resource_index/packages
+copying package.xml -> /home/laiting/HMR_WS/install/lidar_realsense_combination/share/lidar_realsense_combination
+running install_egg_info
+Copying ../../build/lidar_realsense_combination/lidar_realsense_combination.egg-info to /home/laiting/HMR_WS/install/lidar_realsense_combination/lib/python3.10/site-packages/lidar_realsense_combination-0.0.0-py3.10.egg-info
+running install_scripts
+Installing realsense_pointcloud_pub script to /home/laiting/HMR_WS/install/lidar_realsense_combination/lib/lidar_realsense_combination
+writing list of installed files to '/home/laiting/HMR_WS/build/lidar_realsense_combination/install.log'

@@ -1,0 +1,22 @@
+[0.887s] Invoking command in '/home/laiting/HMR_WS/build/rs_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/laiting/turtlebot3_ws/install/turtlebot3_teleop:/home/laiting/turtlebot3_ws/install/turtlebot3_example:/home/laiting/ros2_ws_test/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake --build /home/laiting/HMR_WS/build/rs_bringup -- -j12 -l12
+[0.969s] Invoked command in '/home/laiting/HMR_WS/build/rs_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/laiting/turtlebot3_ws/install/turtlebot3_teleop:/home/laiting/turtlebot3_ws/install/turtlebot3_example:/home/laiting/ros2_ws_test/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake --build /home/laiting/HMR_WS/build/rs_bringup -- -j12 -l12
+[0.987s] Invoking command in '/home/laiting/HMR_WS/build/rs_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/laiting/turtlebot3_ws/install/turtlebot3_teleop:/home/laiting/turtlebot3_ws/install/turtlebot3_example:/home/laiting/ros2_ws_test/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake --install /home/laiting/HMR_WS/build/rs_bringup
+[0.999s] -- Install configuration: ""
+[1.000s] -- Up-to-date: /home/laiting/HMR_WS/install/rs_bringup/share/rs_bringup/launch
+[1.000s] -- Up-to-date: /home/laiting/HMR_WS/install/rs_bringup/share/rs_bringup/launch/rs_launch.py
+[1.000s] -- Up-to-date: /home/laiting/HMR_WS/install/rs_bringup/share/ament_index/resource_index/package_run_dependencies/rs_bringup
+[1.000s] -- Up-to-date: /home/laiting/HMR_WS/install/rs_bringup/share/ament_index/resource_index/parent_prefix_path/rs_bringup
+[1.000s] -- Up-to-date: /home/laiting/HMR_WS/install/rs_bringup/share/rs_bringup/environment/ament_prefix_path.sh
+[1.000s] -- Up-to-date: /home/laiting/HMR_WS/install/rs_bringup/share/rs_bringup/environment/ament_prefix_path.dsv
+[1.001s] -- Up-to-date: /home/laiting/HMR_WS/install/rs_bringup/share/rs_bringup/environment/path.sh
+[1.001s] -- Up-to-date: /home/laiting/HMR_WS/install/rs_bringup/share/rs_bringup/environment/path.dsv
+[1.001s] -- Up-to-date: /home/laiting/HMR_WS/install/rs_bringup/share/rs_bringup/local_setup.bash
+[1.001s] -- Up-to-date: /home/laiting/HMR_WS/install/rs_bringup/share/rs_bringup/local_setup.sh
+[1.001s] -- Up-to-date: /home/laiting/HMR_WS/install/rs_bringup/share/rs_bringup/local_setup.zsh
+[1.001s] -- Up-to-date: /home/laiting/HMR_WS/install/rs_bringup/share/rs_bringup/local_setup.dsv
+[1.001s] -- Installing: /home/laiting/HMR_WS/install/rs_bringup/share/rs_bringup/package.dsv
+[1.001s] -- Up-to-date: /home/laiting/HMR_WS/install/rs_bringup/share/ament_index/resource_index/packages/rs_bringup
+[1.002s] -- Up-to-date: /home/laiting/HMR_WS/install/rs_bringup/share/rs_bringup/cmake/rs_bringupConfig.cmake
+[1.002s] -- Up-to-date: /home/laiting/HMR_WS/install/rs_bringup/share/rs_bringup/cmake/rs_bringupConfig-version.cmake
+[1.002s] -- Up-to-date: /home/laiting/HMR_WS/install/rs_bringup/share/rs_bringup/package.xml
+[1.004s] Invoked command in '/home/laiting/HMR_WS/build/rs_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/laiting/turtlebot3_ws/install/turtlebot3_teleop:/home/laiting/turtlebot3_ws/install/turtlebot3_example:/home/laiting/ros2_ws_test/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake --install /home/laiting/HMR_WS/build/rs_bringup

@@ -1,0 +1,37 @@
+[1.585s] Invoking command in '/home/laiting/HMR_WS/src/lidar_realsense_combination': PYTHONPATH=/home/laiting/HMR_WS/build/lidar_realsense_combination/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/laiting/HMR_WS/install/lidar_realsense_combination/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/lidar_realsense_combination build --build-base /home/laiting/HMR_WS/build/lidar_realsense_combination/build install --record /home/laiting/HMR_WS/build/lidar_realsense_combination/install.log --single-version-externally-managed install_data
+[1.990s] running egg_info
+[1.991s] creating ../../build/lidar_realsense_combination/lidar_realsense_combination.egg-info
+[1.991s] writing ../../build/lidar_realsense_combination/lidar_realsense_combination.egg-info/PKG-INFO
+[1.991s] writing dependency_links to ../../build/lidar_realsense_combination/lidar_realsense_combination.egg-info/dependency_links.txt
+[1.991s] writing entry points to ../../build/lidar_realsense_combination/lidar_realsense_combination.egg-info/entry_points.txt
+[1.992s] writing requirements to ../../build/lidar_realsense_combination/lidar_realsense_combination.egg-info/requires.txt
+[1.992s] writing top-level names to ../../build/lidar_realsense_combination/lidar_realsense_combination.egg-info/top_level.txt
+[1.992s] writing manifest file '../../build/lidar_realsense_combination/lidar_realsense_combination.egg-info/SOURCES.txt'
+[1.997s] reading manifest file '../../build/lidar_realsense_combination/lidar_realsense_combination.egg-info/SOURCES.txt'
+[1.998s] writing manifest file '../../build/lidar_realsense_combination/lidar_realsense_combination.egg-info/SOURCES.txt'
+[1.998s] running build
+[1.998s] running build_py
+[1.998s] creating /home/laiting/HMR_WS/build/lidar_realsense_combination/build
+[1.998s] creating /home/laiting/HMR_WS/build/lidar_realsense_combination/build/lib
+[1.999s] creating /home/laiting/HMR_WS/build/lidar_realsense_combination/build/lib/lidar_realsense_combination
+[1.999s] copying lidar_realsense_combination/realsense_pointcloud_pub.py -> /home/laiting/HMR_WS/build/lidar_realsense_combination/build/lib/lidar_realsense_combination
+[1.999s] copying lidar_realsense_combination/__init__.py -> /home/laiting/HMR_WS/build/lidar_realsense_combination/build/lib/lidar_realsense_combination
+[1.999s] running install
+[1.999s] running install_lib
+[2.000s] creating /home/laiting/HMR_WS/install/lidar_realsense_combination/lib/python3.10/site-packages/lidar_realsense_combination
+[2.000s] copying /home/laiting/HMR_WS/build/lidar_realsense_combination/build/lib/lidar_realsense_combination/realsense_pointcloud_pub.py -> /home/laiting/HMR_WS/install/lidar_realsense_combination/lib/python3.10/site-packages/lidar_realsense_combination
+[2.000s] copying /home/laiting/HMR_WS/build/lidar_realsense_combination/build/lib/lidar_realsense_combination/__init__.py -> /home/laiting/HMR_WS/install/lidar_realsense_combination/lib/python3.10/site-packages/lidar_realsense_combination
+[2.001s] byte-compiling /home/laiting/HMR_WS/install/lidar_realsense_combination/lib/python3.10/site-packages/lidar_realsense_combination/realsense_pointcloud_pub.py to realsense_pointcloud_pub.cpython-310.pyc
+[2.002s] byte-compiling /home/laiting/HMR_WS/install/lidar_realsense_combination/lib/python3.10/site-packages/lidar_realsense_combination/__init__.py to __init__.cpython-310.pyc
+[2.002s] running install_data
+[2.003s] creating /home/laiting/HMR_WS/install/lidar_realsense_combination/share/ament_index
+[2.003s] creating /home/laiting/HMR_WS/install/lidar_realsense_combination/share/ament_index/resource_index
+[2.003s] creating /home/laiting/HMR_WS/install/lidar_realsense_combination/share/ament_index/resource_index/packages
+[2.003s] copying resource/lidar_realsense_combination -> /home/laiting/HMR_WS/install/lidar_realsense_combination/share/ament_index/resource_index/packages
+[2.003s] copying package.xml -> /home/laiting/HMR_WS/install/lidar_realsense_combination/share/lidar_realsense_combination
+[2.003s] running install_egg_info
+[2.006s] Copying ../../build/lidar_realsense_combination/lidar_realsense_combination.egg-info to /home/laiting/HMR_WS/install/lidar_realsense_combination/lib/python3.10/site-packages/lidar_realsense_combination-0.0.0-py3.10.egg-info
+[2.008s] running install_scripts
+[2.039s] Installing realsense_pointcloud_pub script to /home/laiting/HMR_WS/install/lidar_realsense_combination/lib/lidar_realsense_combination
+[2.040s] writing list of installed files to '/home/laiting/HMR_WS/build/lidar_realsense_combination/install.log'
+[2.086s] Invoked command in '/home/laiting/HMR_WS/src/lidar_realsense_combination' returned '0': PYTHONPATH=/home/laiting/HMR_WS/build/lidar_realsense_combination/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/laiting/HMR_WS/install/lidar_realsense_combination/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/lidar_realsense_combination build --build-base /home/laiting/HMR_WS/build/lidar_realsense_combination/build install --record /home/laiting/HMR_WS/build/lidar_realsense_combination/install.log --single-version-externally-managed install_data

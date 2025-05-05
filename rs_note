@@ -1,0 +1,1 @@
+ros2 launch rs_bringup rs_launch.py config_file:=src/rs_bringup/config/realsense_config.yaml //指定開啟yaml檔

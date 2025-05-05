@@ -1,0 +1,241 @@
+[0.139s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.139s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7d386917a500>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7d3869179b70>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7d3869179b70>>)
+[0.422s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.422s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.422s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.422s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.422s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.422s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.422s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/laiting/HMR_WS'
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.423s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.423s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.423s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.423s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.423s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.423s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.423s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.423s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.451s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.451s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.451s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.451s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.451s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.452s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.452s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.452s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.452s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.452s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.452s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.452s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.452s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.452s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.452s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.452s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.453s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.453s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.453s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.453s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.453s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.453s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.453s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.453s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.453s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.453s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.453s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.453s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.453s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_realsense_combination) by extensions ['ignore', 'ignore_ament_install']
+[0.453s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_realsense_combination) by extension 'ignore'
+[0.453s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_realsense_combination) by extension 'ignore_ament_install'
+[0.453s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_realsense_combination) by extensions ['colcon_pkg']
+[0.453s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_realsense_combination) by extension 'colcon_pkg'
+[0.453s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_realsense_combination) by extensions ['colcon_meta']
+[0.453s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_realsense_combination) by extension 'colcon_meta'
+[0.454s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_realsense_combination) by extensions ['ros']
+[0.454s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_realsense_combination) by extension 'ros'
+[0.456s] DEBUG:colcon.colcon_core.package_identification:Package 'src/lidar_realsense_combination' with type 'ros.ament_python' and name 'lidar_realsense_combination'
+[0.457s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_planning_BT) by extensions ['ignore', 'ignore_ament_install']
+[0.457s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_planning_BT) by extension 'ignore'
+[0.457s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_planning_BT) by extension 'ignore_ament_install'
+[0.457s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_planning_BT) by extensions ['colcon_pkg']
+[0.457s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_planning_BT) by extension 'colcon_pkg'
+[0.457s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_planning_BT) by extensions ['colcon_meta']
+[0.457s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_planning_BT) by extension 'colcon_meta'
+[0.457s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_planning_BT) by extensions ['ros']
+[0.457s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_planning_BT) by extension 'ros'
+[0.458s] DEBUG:colcon.colcon_core.package_identification:Package 'src/nav_planning_BT' with type 'ros.ament_python' and name 'nav_planning_BT'
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(src/rs_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(src/rs_bringup) by extension 'ignore'
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(src/rs_bringup) by extension 'ignore_ament_install'
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(src/rs_bringup) by extensions ['colcon_pkg']
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(src/rs_bringup) by extension 'colcon_pkg'
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(src/rs_bringup) by extensions ['colcon_meta']
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(src/rs_bringup) by extension 'colcon_meta'
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(src/rs_bringup) by extensions ['ros']
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(src/rs_bringup) by extension 'ros'
+[0.459s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rs_bringup' with type 'ros.ament_cmake' and name 'rs_bringup'
+[0.459s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.459s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.459s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.459s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.459s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.485s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.485s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.488s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/laiting/HMR_WS/install
+[0.488s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 15 installed packages in /home/laiting/turtlebot3_ws/install
+[0.489s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/laiting/ros2_ws_test/install
+[0.491s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 383 installed packages in /opt/ros/humble
+[0.495s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.563s] Level 5:colcon.colcon_core.verb:set package 'lidar_realsense_combination' build argument 'cmake_args' from command line to 'None'
+[0.563s] Level 5:colcon.colcon_core.verb:set package 'lidar_realsense_combination' build argument 'cmake_target' from command line to 'None'
+[0.563s] Level 5:colcon.colcon_core.verb:set package 'lidar_realsense_combination' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.563s] Level 5:colcon.colcon_core.verb:set package 'lidar_realsense_combination' build argument 'cmake_clean_cache' from command line to 'False'
+[0.563s] Level 5:colcon.colcon_core.verb:set package 'lidar_realsense_combination' build argument 'cmake_clean_first' from command line to 'False'
+[0.563s] Level 5:colcon.colcon_core.verb:set package 'lidar_realsense_combination' build argument 'cmake_force_configure' from command line to 'False'
+[0.563s] Level 5:colcon.colcon_core.verb:set package 'lidar_realsense_combination' build argument 'ament_cmake_args' from command line to 'None'
+[0.563s] Level 5:colcon.colcon_core.verb:set package 'lidar_realsense_combination' build argument 'catkin_cmake_args' from command line to 'None'
+[0.563s] Level 5:colcon.colcon_core.verb:set package 'lidar_realsense_combination' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.563s] DEBUG:colcon.colcon_core.verb:Building package 'lidar_realsense_combination' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/laiting/HMR_WS/build/lidar_realsense_combination', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/laiting/HMR_WS/install/lidar_realsense_combination', 'merge_install': False, 'path': '/home/laiting/HMR_WS/src/lidar_realsense_combination', 'symlink_install': False, 'test_result_base': None}
+[0.564s] Level 5:colcon.colcon_core.verb:set package 'nav_planning_BT' build argument 'cmake_args' from command line to 'None'
+[0.564s] Level 5:colcon.colcon_core.verb:set package 'nav_planning_BT' build argument 'cmake_target' from command line to 'None'
+[0.564s] Level 5:colcon.colcon_core.verb:set package 'nav_planning_BT' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.564s] Level 5:colcon.colcon_core.verb:set package 'nav_planning_BT' build argument 'cmake_clean_cache' from command line to 'False'
+[0.564s] Level 5:colcon.colcon_core.verb:set package 'nav_planning_BT' build argument 'cmake_clean_first' from command line to 'False'
+[0.564s] Level 5:colcon.colcon_core.verb:set package 'nav_planning_BT' build argument 'cmake_force_configure' from command line to 'False'
+[0.564s] Level 5:colcon.colcon_core.verb:set package 'nav_planning_BT' build argument 'ament_cmake_args' from command line to 'None'
+[0.564s] Level 5:colcon.colcon_core.verb:set package 'nav_planning_BT' build argument 'catkin_cmake_args' from command line to 'None'
+[0.564s] Level 5:colcon.colcon_core.verb:set package 'nav_planning_BT' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.565s] DEBUG:colcon.colcon_core.verb:Building package 'nav_planning_BT' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/laiting/HMR_WS/build/nav_planning_BT', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/laiting/HMR_WS/install/nav_planning_BT', 'merge_install': False, 'path': '/home/laiting/HMR_WS/src/nav_planning_BT', 'symlink_install': False, 'test_result_base': None}
+[0.565s] Level 5:colcon.colcon_core.verb:set package 'rs_bringup' build argument 'cmake_args' from command line to 'None'
+[0.565s] Level 5:colcon.colcon_core.verb:set package 'rs_bringup' build argument 'cmake_target' from command line to 'None'
+[0.565s] Level 5:colcon.colcon_core.verb:set package 'rs_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.565s] Level 5:colcon.colcon_core.verb:set package 'rs_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[0.565s] Level 5:colcon.colcon_core.verb:set package 'rs_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[0.565s] Level 5:colcon.colcon_core.verb:set package 'rs_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[0.565s] Level 5:colcon.colcon_core.verb:set package 'rs_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[0.565s] Level 5:colcon.colcon_core.verb:set package 'rs_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[0.565s] Level 5:colcon.colcon_core.verb:set package 'rs_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.566s] DEBUG:colcon.colcon_core.verb:Building package 'rs_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/laiting/HMR_WS/build/rs_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/laiting/HMR_WS/install/rs_bringup', 'merge_install': False, 'path': '/home/laiting/HMR_WS/src/rs_bringup', 'symlink_install': False, 'test_result_base': None}
+[0.566s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.568s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.568s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/laiting/HMR_WS/src/lidar_realsense_combination' with build type 'ament_python'
+[0.568s] Level 1:colcon.colcon_core.shell:create_environment_hook('lidar_realsense_combination', 'ament_prefix_path')
+[0.572s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.572s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/laiting/HMR_WS/install/lidar_realsense_combination/share/lidar_realsense_combination/hook/ament_prefix_path.ps1'
+[0.573s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/laiting/HMR_WS/install/lidar_realsense_combination/share/lidar_realsense_combination/hook/ament_prefix_path.dsv'
+[0.574s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/laiting/HMR_WS/install/lidar_realsense_combination/share/lidar_realsense_combination/hook/ament_prefix_path.sh'
+[0.575s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.575s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.581s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/laiting/HMR_WS/src/nav_planning_BT' with build type 'ament_python'
+[0.581s] Level 1:colcon.colcon_core.shell:create_environment_hook('nav_planning_BT', 'ament_prefix_path')
+[0.581s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/laiting/HMR_WS/install/nav_planning_BT/share/nav_planning_BT/hook/ament_prefix_path.ps1'
+[0.582s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/laiting/HMR_WS/install/nav_planning_BT/share/nav_planning_BT/hook/ament_prefix_path.dsv'
+[0.582s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/laiting/HMR_WS/install/nav_planning_BT/share/nav_planning_BT/hook/ament_prefix_path.sh'
+[0.582s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.582s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.588s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/laiting/HMR_WS/src/rs_bringup' with build type 'ament_cmake'
+[0.588s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/laiting/HMR_WS/src/rs_bringup'
+[0.588s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.588s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.012s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/laiting/HMR_WS/src/lidar_realsense_combination'
+[1.012s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.012s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.424s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/laiting/HMR_WS/src/nav_planning_BT'
+[1.425s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.425s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.437s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/laiting/HMR_WS/build/rs_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/laiting/HMR_WS/install/nav_planning_BT:/home/laiting/HMR_WS/install/lidar_realsense_combination:/home/laiting/turtlebot3_ws/install/turtlebot3_teleop:/home/laiting/turtlebot3_ws/install/turtlebot3_example:/home/laiting/ros2_ws_test/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake --build /home/laiting/HMR_WS/build/rs_bringup -- -j12 -l12
+[1.500s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/laiting/HMR_WS/build/rs_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/laiting/HMR_WS/install/nav_planning_BT:/home/laiting/HMR_WS/install/lidar_realsense_combination:/home/laiting/turtlebot3_ws/install/turtlebot3_teleop:/home/laiting/turtlebot3_ws/install/turtlebot3_example:/home/laiting/ros2_ws_test/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake --build /home/laiting/HMR_WS/build/rs_bringup -- -j12 -l12
+[1.518s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/laiting/HMR_WS/build/rs_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/laiting/HMR_WS/install/nav_planning_BT:/home/laiting/HMR_WS/install/lidar_realsense_combination:/home/laiting/turtlebot3_ws/install/turtlebot3_teleop:/home/laiting/turtlebot3_ws/install/turtlebot3_example:/home/laiting/ros2_ws_test/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake --install /home/laiting/HMR_WS/build/rs_bringup
+[1.536s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rs_bringup)
+[1.538s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/laiting/HMR_WS/build/rs_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/laiting/HMR_WS/install/nav_planning_BT:/home/laiting/HMR_WS/install/lidar_realsense_combination:/home/laiting/turtlebot3_ws/install/turtlebot3_teleop:/home/laiting/turtlebot3_ws/install/turtlebot3_example:/home/laiting/ros2_ws_test/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake --install /home/laiting/HMR_WS/build/rs_bringup
+[1.540s] Level 1:colcon.colcon_core.environment:checking '/home/laiting/HMR_WS/install/rs_bringup' for CMake module files
+[1.541s] Level 1:colcon.colcon_core.environment:checking '/home/laiting/HMR_WS/install/rs_bringup' for CMake config files
+[1.542s] Level 1:colcon.colcon_core.shell:create_environment_hook('rs_bringup', 'cmake_prefix_path')
+[1.542s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/laiting/HMR_WS/install/rs_bringup/share/rs_bringup/hook/cmake_prefix_path.ps1'
+[1.543s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/laiting/HMR_WS/install/rs_bringup/share/rs_bringup/hook/cmake_prefix_path.dsv'
+[1.544s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/laiting/HMR_WS/install/rs_bringup/share/rs_bringup/hook/cmake_prefix_path.sh'
+[1.545s] Level 1:colcon.colcon_core.environment:checking '/home/laiting/HMR_WS/install/rs_bringup/bin'
+[1.545s] Level 1:colcon.colcon_core.environment:checking '/home/laiting/HMR_WS/install/rs_bringup/lib/pkgconfig/rs_bringup.pc'
+[1.545s] Level 1:colcon.colcon_core.environment:checking '/home/laiting/HMR_WS/install/rs_bringup/lib/python3.10/site-packages'
+[1.547s] Level 1:colcon.colcon_core.environment:checking '/home/laiting/HMR_WS/install/rs_bringup/bin'
+[1.548s] INFO:colcon.colcon_core.shell:Creating package script '/home/laiting/HMR_WS/install/rs_bringup/share/rs_bringup/package.ps1'
+[1.550s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/laiting/HMR_WS/install/rs_bringup/share/rs_bringup/package.dsv'
+[1.551s] INFO:colcon.colcon_core.shell:Creating package script '/home/laiting/HMR_WS/install/rs_bringup/share/rs_bringup/package.sh'
+[1.552s] INFO:colcon.colcon_core.shell:Creating package script '/home/laiting/HMR_WS/install/rs_bringup/share/rs_bringup/package.bash'
+[1.553s] INFO:colcon.colcon_core.shell:Creating package script '/home/laiting/HMR_WS/install/rs_bringup/share/rs_bringup/package.zsh'
+[1.553s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/laiting/HMR_WS/install/rs_bringup/share/colcon-core/packages/rs_bringup)
+[1.554s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rs_bringup)
+[1.554s] Level 1:colcon.colcon_core.environment:checking '/home/laiting/HMR_WS/install/rs_bringup' for CMake module files
+[1.555s] Level 1:colcon.colcon_core.environment:checking '/home/laiting/HMR_WS/install/rs_bringup' for CMake config files
+[1.555s] Level 1:colcon.colcon_core.shell:create_environment_hook('rs_bringup', 'cmake_prefix_path')
+[1.555s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/laiting/HMR_WS/install/rs_bringup/share/rs_bringup/hook/cmake_prefix_path.ps1'
+[1.556s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/laiting/HMR_WS/install/rs_bringup/share/rs_bringup/hook/cmake_prefix_path.dsv'
+[1.556s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/laiting/HMR_WS/install/rs_bringup/share/rs_bringup/hook/cmake_prefix_path.sh'
+[1.557s] Level 1:colcon.colcon_core.environment:checking '/home/laiting/HMR_WS/install/rs_bringup/bin'
+[1.557s] Level 1:colcon.colcon_core.environment:checking '/home/laiting/HMR_WS/install/rs_bringup/lib/pkgconfig/rs_bringup.pc'
+[1.557s] Level 1:colcon.colcon_core.environment:checking '/home/laiting/HMR_WS/install/rs_bringup/lib/python3.10/site-packages'
+[1.557s] Level 1:colcon.colcon_core.environment:checking '/home/laiting/HMR_WS/install/rs_bringup/bin'
+[1.558s] INFO:colcon.colcon_core.shell:Creating package script '/home/laiting/HMR_WS/install/rs_bringup/share/rs_bringup/package.ps1'
+[1.559s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/laiting/HMR_WS/install/rs_bringup/share/rs_bringup/package.dsv'
+[1.560s] INFO:colcon.colcon_core.shell:Creating package script '/home/laiting/HMR_WS/install/rs_bringup/share/rs_bringup/package.sh'
+[1.561s] INFO:colcon.colcon_core.shell:Creating package script '/home/laiting/HMR_WS/install/rs_bringup/share/rs_bringup/package.bash'
+[1.561s] INFO:colcon.colcon_core.shell:Creating package script '/home/laiting/HMR_WS/install/rs_bringup/share/rs_bringup/package.zsh'
+[1.563s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/laiting/HMR_WS/install/rs_bringup/share/colcon-core/packages/rs_bringup)
+[2.034s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/laiting/HMR_WS/src/nav_planning_BT': PYTHONPATH=/home/laiting/HMR_WS/build/nav_planning_BT/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/laiting/HMR_WS/install/nav_planning_BT/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/nav_planning_BT build --build-base /home/laiting/HMR_WS/build/nav_planning_BT/build install --record /home/laiting/HMR_WS/build/nav_planning_BT/install.log --single-version-externally-managed install_data
+[2.055s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/laiting/HMR_WS/src/lidar_realsense_combination': PYTHONPATH=/home/laiting/HMR_WS/build/lidar_realsense_combination/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/laiting/HMR_WS/install/lidar_realsense_combination/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/lidar_realsense_combination build --build-base /home/laiting/HMR_WS/build/lidar_realsense_combination/build install --record /home/laiting/HMR_WS/build/lidar_realsense_combination/install.log --single-version-externally-managed install_data
+[2.541s] Level 1:colcon.colcon_core.environment:checking '/home/laiting/HMR_WS/install/nav_planning_BT' for CMake module files
+[2.543s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/laiting/HMR_WS/src/nav_planning_BT' returned '0': PYTHONPATH=/home/laiting/HMR_WS/build/nav_planning_BT/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/laiting/HMR_WS/install/nav_planning_BT/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/nav_planning_BT build --build-base /home/laiting/HMR_WS/build/nav_planning_BT/build install --record /home/laiting/HMR_WS/build/nav_planning_BT/install.log --single-version-externally-managed install_data
+[2.543s] Level 1:colcon.colcon_core.environment:checking '/home/laiting/HMR_WS/install/nav_planning_BT' for CMake config files
+[2.544s] Level 1:colcon.colcon_core.environment:checking '/home/laiting/HMR_WS/install/nav_planning_BT/lib'
+[2.544s] Level 1:colcon.colcon_core.environment:checking '/home/laiting/HMR_WS/install/nav_planning_BT/bin'
+[2.544s] Level 1:colcon.colcon_core.environment:checking '/home/laiting/HMR_WS/install/nav_planning_BT/lib/pkgconfig/nav_planning_BT.pc'
+[2.544s] Level 1:colcon.colcon_core.environment:checking '/home/laiting/HMR_WS/install/nav_planning_BT/lib/python3.10/site-packages'
+[2.544s] Level 1:colcon.colcon_core.shell:create_environment_hook('nav_planning_BT', 'pythonpath')
+[2.544s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/laiting/HMR_WS/install/nav_planning_BT/share/nav_planning_BT/hook/pythonpath.ps1'
+[2.545s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/laiting/HMR_WS/install/nav_planning_BT/share/nav_planning_BT/hook/pythonpath.dsv'
+[2.545s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/laiting/HMR_WS/install/nav_planning_BT/share/nav_planning_BT/hook/pythonpath.sh'
+[2.546s] Level 1:colcon.colcon_core.environment:checking '/home/laiting/HMR_WS/install/nav_planning_BT/bin'
+[2.546s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(nav_planning_BT)
+[2.547s] INFO:colcon.colcon_core.shell:Creating package script '/home/laiting/HMR_WS/install/nav_planning_BT/share/nav_planning_BT/package.ps1'
+[2.547s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/laiting/HMR_WS/install/nav_planning_BT/share/nav_planning_BT/package.dsv'
+[2.548s] INFO:colcon.colcon_core.shell:Creating package script '/home/laiting/HMR_WS/install/nav_planning_BT/share/nav_planning_BT/package.sh'
+[2.548s] INFO:colcon.colcon_core.shell:Creating package script '/home/laiting/HMR_WS/install/nav_planning_BT/share/nav_planning_BT/package.bash'
+[2.548s] INFO:colcon.colcon_core.shell:Creating package script '/home/laiting/HMR_WS/install/nav_planning_BT/share/nav_planning_BT/package.zsh'
+[2.549s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/laiting/HMR_WS/install/nav_planning_BT/share/colcon-core/packages/nav_planning_BT)
+[2.554s] Level 1:colcon.colcon_core.environment:checking '/home/laiting/HMR_WS/install/lidar_realsense_combination' for CMake module files
+[2.555s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/laiting/HMR_WS/src/lidar_realsense_combination' returned '0': PYTHONPATH=/home/laiting/HMR_WS/build/lidar_realsense_combination/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/laiting/HMR_WS/install/lidar_realsense_combination/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/lidar_realsense_combination build --build-base /home/laiting/HMR_WS/build/lidar_realsense_combination/build install --record /home/laiting/HMR_WS/build/lidar_realsense_combination/install.log --single-version-externally-managed install_data
+[2.555s] Level 1:colcon.colcon_core.environment:checking '/home/laiting/HMR_WS/install/lidar_realsense_combination' for CMake config files
+[2.556s] Level 1:colcon.colcon_core.environment:checking '/home/laiting/HMR_WS/install/lidar_realsense_combination/lib'
+[2.556s] Level 1:colcon.colcon_core.environment:checking '/home/laiting/HMR_WS/install/lidar_realsense_combination/bin'
+[2.556s] Level 1:colcon.colcon_core.environment:checking '/home/laiting/HMR_WS/install/lidar_realsense_combination/lib/pkgconfig/lidar_realsense_combination.pc'
+[2.557s] Level 1:colcon.colcon_core.environment:checking '/home/laiting/HMR_WS/install/lidar_realsense_combination/lib/python3.10/site-packages'
+[2.557s] Level 1:colcon.colcon_core.shell:create_environment_hook('lidar_realsense_combination', 'pythonpath')
+[2.557s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/laiting/HMR_WS/install/lidar_realsense_combination/share/lidar_realsense_combination/hook/pythonpath.ps1'
+[2.558s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/laiting/HMR_WS/install/lidar_realsense_combination/share/lidar_realsense_combination/hook/pythonpath.dsv'
+[2.559s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/laiting/HMR_WS/install/lidar_realsense_combination/share/lidar_realsense_combination/hook/pythonpath.sh'
+[2.559s] Level 1:colcon.colcon_core.environment:checking '/home/laiting/HMR_WS/install/lidar_realsense_combination/bin'
+[2.559s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lidar_realsense_combination)
+[2.560s] INFO:colcon.colcon_core.shell:Creating package script '/home/laiting/HMR_WS/install/lidar_realsense_combination/share/lidar_realsense_combination/package.ps1'
+[2.560s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/laiting/HMR_WS/install/lidar_realsense_combination/share/lidar_realsense_combination/package.dsv'
+[2.561s] INFO:colcon.colcon_core.shell:Creating package script '/home/laiting/HMR_WS/install/lidar_realsense_combination/share/lidar_realsense_combination/package.sh'
+[2.561s] INFO:colcon.colcon_core.shell:Creating package script '/home/laiting/HMR_WS/install/lidar_realsense_combination/share/lidar_realsense_combination/package.bash'
+[2.562s] INFO:colcon.colcon_core.shell:Creating package script '/home/laiting/HMR_WS/install/lidar_realsense_combination/share/lidar_realsense_combination/package.zsh'
+[2.562s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/laiting/HMR_WS/install/lidar_realsense_combination/share/colcon-core/packages/lidar_realsense_combination)
+[2.562s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[2.563s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[2.563s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[2.563s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[2.568s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[2.568s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[2.568s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[2.582s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[2.583s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/laiting/HMR_WS/install/local_setup.ps1'
+[2.584s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/laiting/HMR_WS/install/_local_setup_util_ps1.py'
+[2.587s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/laiting/HMR_WS/install/setup.ps1'
+[2.589s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/laiting/HMR_WS/install/local_setup.sh'
+[2.590s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/laiting/HMR_WS/install/_local_setup_util_sh.py'
+[2.590s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/laiting/HMR_WS/install/setup.sh'
+[2.593s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/laiting/HMR_WS/install/local_setup.bash'
+[2.594s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/laiting/HMR_WS/install/setup.bash'
+[2.596s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/laiting/HMR_WS/install/local_setup.zsh'
+[2.596s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/laiting/HMR_WS/install/setup.zsh'

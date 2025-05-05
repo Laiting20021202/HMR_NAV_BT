@@ -1,0 +1,18 @@
+# realsense_colorize.yaml
+camera_ns.my_realsense:          # ← node name 要跟你的 log 完全一致
+  ros__parameters:
+    # 僅啟用深度影像
+    enable_color: false
+    enable_depth: true
+
+    # 加入 Librealsense 的 colorizer 後處理
+    colorizer.enable: true
+    colorizer.color_scheme: 0    # Jet colormap (0~6 可調)
+    colorizer.min_distance: 0.2  # 0.2 m 以下不著色
+    colorizer.max_distance: 4.0  # 4.0 m 以上不著色
+
+    # （如果你喜歡用 filters 陣列也可以，二擇一即可，以下示範註解掉）
+    # filters: ["colorizer"]
+    # colorizer.color_scheme: 0
+    # colorizer.min_distance: 0.2
+    # colorizer.max_distance: 4.0

@@ -1,0 +1,79 @@
+# Basic settings
+camera_name: "my_realsense"
+camera_namespace: "camera_ns"
+serial_no: ""
+usb_port_id: ""
+device_type: ""
+# config_file: "/home/austin/Documents/panda_ai_ws/src/rs_bringup/launch/rs_launch.py"
+# json_file_path: ""
+initial_reset: false
+accelerate_gpu_with_glsl: false
+rosbag_filename: ""
+log_level: "info"
+output: "screen"
+
+# RGB image (RGB)
+enable_color: true
+rgb_camera.color_profile: "640,480,30"
+rgb_camera.color_format: "RGB8"
+rgb_camera.enable_auto_exposure: true
+
+# Depth image (Depth)
+enable_depth: true
+depth_module.depth_profile: "640,480,30"
+depth_module.depth_format: "Z16"
+depth_module.enable_auto_exposure: true
+depth_module.exposure: 8500
+depth_module.gain: 16
+depth_module.hdr_enabled: false
+depth_module.exposure.1: 7500
+depth_module.gain.1: 16
+depth_module.exposure.2: 1
+depth_module.gain.2: 16
+
+# Infrared image (Infrared)
+enable_infra: true
+enable_infra1: true
+enable_infra2: true
+depth_module.infra_profile: "640,480,30"
+depth_module.infra_format: "RGB8"
+depth_module.infra1_format: "Y8"
+depth_module.infra2_format: "Y8"
+
+# Image Procession
+enable_sync: true
+enable_rgbd: true
+align_depth.enable: true
+colorizer.enable: false
+decimation_filter.enable: false
+spatial_filter.enable: false
+temporal_filter.enable: false
+disparity_filter.enable: false
+hole_filling_filter.enable: false
+hdr_merge.enable: false
+
+# IMU (accel & gyro)
+enable_gyro: false
+enable_accel: false
+gyro_fps: 0
+accel_fps: 0
+unite_imu_method: 0
+angular_velocity_cov: 0.01
+linear_accel_cov: 0.01
+
+# PointCloud
+pointcloud.enable: false
+pointcloud.stream_filter: 2
+pointcloud.stream_index_filter: 0
+pointcloud.ordered_pc: false
+pointcloud.allow_no_texture_points: false
+
+# TF (Transform)
+publish_tf: true
+tf_publish_rate: 0.0
+
+# Others
+clip_distance: -2.0
+diagnostics_period: 0.0
+wait_for_device_timeout: -1.0
+reconnect_timeout: 6.0

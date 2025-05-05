@@ -1,0 +1,19 @@
+ros__parameters:
+  enable_color: true
+  enable_depth: true
+  enable_infra1: false
+  enable_infra2: false
+  enable_gyro: true
+  enable_accel: true
+
+  color_width: 960
+  color_height: 540
+  color_fps: 30
+
+  depth_width: 960
+  depth_height: 540
+  depth_fps: 30
+
+  unite_imu_method: "linear_interpolation"
+
+  enable_sync: true
