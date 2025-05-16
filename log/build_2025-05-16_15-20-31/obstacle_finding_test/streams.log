@@ -1,0 +1,37 @@
+[1.532s] Invoking command in '/home/laiting/HMR_WS/src/obstacle_finding_test': PYTHONPATH=/home/laiting/HMR_WS/build/obstacle_finding_test/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/laiting/HMR_WS/install/obstacle_finding_test/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/obstacle_finding_test build --build-base /home/laiting/HMR_WS/build/obstacle_finding_test/build install --record /home/laiting/HMR_WS/build/obstacle_finding_test/install.log --single-version-externally-managed install_data
+[1.822s] running egg_info
+[1.822s] creating ../../build/obstacle_finding_test/obstacle_finding_test.egg-info
+[1.822s] writing ../../build/obstacle_finding_test/obstacle_finding_test.egg-info/PKG-INFO
+[1.823s] writing dependency_links to ../../build/obstacle_finding_test/obstacle_finding_test.egg-info/dependency_links.txt
+[1.823s] writing entry points to ../../build/obstacle_finding_test/obstacle_finding_test.egg-info/entry_points.txt
+[1.823s] writing requirements to ../../build/obstacle_finding_test/obstacle_finding_test.egg-info/requires.txt
+[1.824s] writing top-level names to ../../build/obstacle_finding_test/obstacle_finding_test.egg-info/top_level.txt
+[1.824s] writing manifest file '../../build/obstacle_finding_test/obstacle_finding_test.egg-info/SOURCES.txt'
+[1.826s] reading manifest file '../../build/obstacle_finding_test/obstacle_finding_test.egg-info/SOURCES.txt'
+[1.827s] writing manifest file '../../build/obstacle_finding_test/obstacle_finding_test.egg-info/SOURCES.txt'
+[1.828s] running build
+[1.828s] running build_py
+[1.828s] creating /home/laiting/HMR_WS/build/obstacle_finding_test/build
+[1.828s] creating /home/laiting/HMR_WS/build/obstacle_finding_test/build/lib
+[1.828s] creating /home/laiting/HMR_WS/build/obstacle_finding_test/build/lib/obstacle_finding_test
+[1.828s] copying obstacle_finding_test/obstacle_finding_test.py -> /home/laiting/HMR_WS/build/obstacle_finding_test/build/lib/obstacle_finding_test
+[1.828s] copying obstacle_finding_test/__init__.py -> /home/laiting/HMR_WS/build/obstacle_finding_test/build/lib/obstacle_finding_test
+[1.828s] running install
+[1.829s] running install_lib
+[1.830s] creating /home/laiting/HMR_WS/install/obstacle_finding_test/lib/python3.10/site-packages/obstacle_finding_test
+[1.830s] copying /home/laiting/HMR_WS/build/obstacle_finding_test/build/lib/obstacle_finding_test/obstacle_finding_test.py -> /home/laiting/HMR_WS/install/obstacle_finding_test/lib/python3.10/site-packages/obstacle_finding_test
+[1.830s] copying /home/laiting/HMR_WS/build/obstacle_finding_test/build/lib/obstacle_finding_test/__init__.py -> /home/laiting/HMR_WS/install/obstacle_finding_test/lib/python3.10/site-packages/obstacle_finding_test
+[1.830s] byte-compiling /home/laiting/HMR_WS/install/obstacle_finding_test/lib/python3.10/site-packages/obstacle_finding_test/obstacle_finding_test.py to obstacle_finding_test.cpython-310.pyc
+[1.832s] byte-compiling /home/laiting/HMR_WS/install/obstacle_finding_test/lib/python3.10/site-packages/obstacle_finding_test/__init__.py to __init__.cpython-310.pyc
+[1.832s] running install_data
+[1.832s] creating /home/laiting/HMR_WS/install/obstacle_finding_test/share/ament_index
+[1.832s] creating /home/laiting/HMR_WS/install/obstacle_finding_test/share/ament_index/resource_index
+[1.832s] creating /home/laiting/HMR_WS/install/obstacle_finding_test/share/ament_index/resource_index/packages
+[1.833s] copying resource/obstacle_finding_test -> /home/laiting/HMR_WS/install/obstacle_finding_test/share/ament_index/resource_index/packages
+[1.833s] copying package.xml -> /home/laiting/HMR_WS/install/obstacle_finding_test/share/obstacle_finding_test
+[1.833s] running install_egg_info
+[1.835s] Copying ../../build/obstacle_finding_test/obstacle_finding_test.egg-info to /home/laiting/HMR_WS/install/obstacle_finding_test/lib/python3.10/site-packages/obstacle_finding_test-0.0.0-py3.10.egg-info
+[1.836s] running install_scripts
+[1.858s] Installing obstacle_finding_test script to /home/laiting/HMR_WS/install/obstacle_finding_test/lib/obstacle_finding_test
+[1.858s] writing list of installed files to '/home/laiting/HMR_WS/build/obstacle_finding_test/install.log'
+[1.898s] Invoked command in '/home/laiting/HMR_WS/src/obstacle_finding_test' returned '0': PYTHONPATH=/home/laiting/HMR_WS/build/obstacle_finding_test/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/laiting/HMR_WS/install/obstacle_finding_test/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/obstacle_finding_test build --build-base /home/laiting/HMR_WS/build/obstacle_finding_test/build install --record /home/laiting/HMR_WS/build/obstacle_finding_test/install.log --single-version-externally-managed install_data

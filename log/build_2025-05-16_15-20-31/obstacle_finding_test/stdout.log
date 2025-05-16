@@ -1,0 +1,35 @@
+running egg_info
+creating ../../build/obstacle_finding_test/obstacle_finding_test.egg-info
+writing ../../build/obstacle_finding_test/obstacle_finding_test.egg-info/PKG-INFO
+writing dependency_links to ../../build/obstacle_finding_test/obstacle_finding_test.egg-info/dependency_links.txt
+writing entry points to ../../build/obstacle_finding_test/obstacle_finding_test.egg-info/entry_points.txt
+writing requirements to ../../build/obstacle_finding_test/obstacle_finding_test.egg-info/requires.txt
+writing top-level names to ../../build/obstacle_finding_test/obstacle_finding_test.egg-info/top_level.txt
+writing manifest file '../../build/obstacle_finding_test/obstacle_finding_test.egg-info/SOURCES.txt'
+reading manifest file '../../build/obstacle_finding_test/obstacle_finding_test.egg-info/SOURCES.txt'
+writing manifest file '../../build/obstacle_finding_test/obstacle_finding_test.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/laiting/HMR_WS/build/obstacle_finding_test/build
+creating /home/laiting/HMR_WS/build/obstacle_finding_test/build/lib
+creating /home/laiting/HMR_WS/build/obstacle_finding_test/build/lib/obstacle_finding_test
+copying obstacle_finding_test/obstacle_finding_test.py -> /home/laiting/HMR_WS/build/obstacle_finding_test/build/lib/obstacle_finding_test
+copying obstacle_finding_test/__init__.py -> /home/laiting/HMR_WS/build/obstacle_finding_test/build/lib/obstacle_finding_test
+running install
+running install_lib
+creating /home/laiting/HMR_WS/install/obstacle_finding_test/lib/python3.10/site-packages/obstacle_finding_test
+copying /home/laiting/HMR_WS/build/obstacle_finding_test/build/lib/obstacle_finding_test/obstacle_finding_test.py -> /home/laiting/HMR_WS/install/obstacle_finding_test/lib/python3.10/site-packages/obstacle_finding_test
+copying /home/laiting/HMR_WS/build/obstacle_finding_test/build/lib/obstacle_finding_test/__init__.py -> /home/laiting/HMR_WS/install/obstacle_finding_test/lib/python3.10/site-packages/obstacle_finding_test
+byte-compiling /home/laiting/HMR_WS/install/obstacle_finding_test/lib/python3.10/site-packages/obstacle_finding_test/obstacle_finding_test.py to obstacle_finding_test.cpython-310.pyc
+byte-compiling /home/laiting/HMR_WS/install/obstacle_finding_test/lib/python3.10/site-packages/obstacle_finding_test/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/laiting/HMR_WS/install/obstacle_finding_test/share/ament_index
+creating /home/laiting/HMR_WS/install/obstacle_finding_test/share/ament_index/resource_index
+creating /home/laiting/HMR_WS/install/obstacle_finding_test/share/ament_index/resource_index/packages
+copying resource/obstacle_finding_test -> /home/laiting/HMR_WS/install/obstacle_finding_test/share/ament_index/resource_index/packages
+copying package.xml -> /home/laiting/HMR_WS/install/obstacle_finding_test/share/obstacle_finding_test
+running install_egg_info
+Copying ../../build/obstacle_finding_test/obstacle_finding_test.egg-info to /home/laiting/HMR_WS/install/obstacle_finding_test/lib/python3.10/site-packages/obstacle_finding_test-0.0.0-py3.10.egg-info
+running install_scripts
+Installing obstacle_finding_test script to /home/laiting/HMR_WS/install/obstacle_finding_test/lib/obstacle_finding_test
+writing list of installed files to '/home/laiting/HMR_WS/build/obstacle_finding_test/install.log'

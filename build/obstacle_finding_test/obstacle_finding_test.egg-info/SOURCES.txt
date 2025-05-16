@@ -1,0 +1,16 @@
+package.xml
+setup.cfg
+setup.py
+../../build/obstacle_finding_test/obstacle_finding_test.egg-info/PKG-INFO
+../../build/obstacle_finding_test/obstacle_finding_test.egg-info/SOURCES.txt
+../../build/obstacle_finding_test/obstacle_finding_test.egg-info/dependency_links.txt
+../../build/obstacle_finding_test/obstacle_finding_test.egg-info/entry_points.txt
+../../build/obstacle_finding_test/obstacle_finding_test.egg-info/requires.txt
+../../build/obstacle_finding_test/obstacle_finding_test.egg-info/top_level.txt
+../../build/obstacle_finding_test/obstacle_finding_test.egg-info/zip-safe
+obstacle_finding_test/__init__.py
+obstacle_finding_test/obstacle_finding_test.py
+resource/obstacle_finding_test
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

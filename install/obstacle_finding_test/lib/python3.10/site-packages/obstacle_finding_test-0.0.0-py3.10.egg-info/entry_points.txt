@@ -1,0 +1,3 @@
+[console_scripts]
+obstacle_finding_test = obstacle_finding_test.obstacle_finding_test:main
+
